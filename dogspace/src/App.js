@@ -1,10 +1,16 @@
 import React, { Component } from 'react';
 import './App.css';
-import ReactDOM from 'react-dom';
 import YTSearch from 'youtube-api-search';
 import _ from 'lodash';
+import SearchBar from './SearchBar';
+import VideoMain from './VideoMain';
+import VideoList from './VideoList';
 
-const API_KEY = process.env.REACT_APP_NEWS_API_KEY
+
+
+
+const API_KEY = `${process.env.REACT_APP_API_KEY_YT}`
+console.log(API_KEY)
 
 
 class App extends Component {
@@ -14,11 +20,11 @@ class App extends Component {
     displayVideo: null
   }
 
-  videoSearch(term){
-    YTSearch({key: API_KEY, term: term}, (videos) => {
+  videoSearch(term, api_key){
+    YTSearch({key: api_key, term: term}, (videos) => {
       this.setState({ 
           videos: videos,
-          selectedVideo: videos[0]
+          displayVideo: videos[0]
       })
   })
 
@@ -26,21 +32,19 @@ class App extends Component {
 
 
   render() {
-    const videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 300)
+    const videoSearch = _.debounce((term)=>{this.videoSearch(term, API_KEY)}, 300)
     
     return (
       <div>
         <div className="page-title">DogSpace</div>
             <div className="page-description">A wellness space for dogs and their people</div>
-            {/* <SearchBar
+            <SearchBar
                 onSearchTermChange={videoSearch}/>
-            <VideoDetail 
-                video={this.state.selectedVideo}/>
-            <VideoList 
-                onVideoSelect= {selectedVideo => this.setState({selectedVideo})}
-                videos ={this.state.videos}/> */}
-
-
+            <VideoMain
+                video={this.state.displayVideo}/>
+            <VideoList
+                onVideoSelect= {displayVideo => this.setState({displayVideo})}
+                videos ={this.state.videos}/> 
       </div>
     )
   }
