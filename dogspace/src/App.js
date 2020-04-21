@@ -7,11 +7,7 @@ import VideoMain from './VideoMain';
 import VideoList from './VideoList';
 
 
-
-
-const API_KEY = `${process.env.REACT_APP_API_KEY_YT}`
-console.log(API_KEY)
-
+let API_KEY = process.env.REACT_APP_API_KEY_YT
 
 class App extends Component {
   
@@ -20,8 +16,8 @@ class App extends Component {
     displayVideo: null
   }
 
-  videoSearch(term, api_key){
-    YTSearch({key: api_key, term: term}, (videos) => {
+  videoSearch(term){
+    YTSearch({key: API_KEY, term: term}, (videos) => {
       this.setState({ 
           videos: videos,
           displayVideo: videos[0]
@@ -30,9 +26,8 @@ class App extends Component {
 
 }
 
-
   render() {
-    const videoSearch = _.debounce((term)=>{this.videoSearch(term, API_KEY)}, 300)
+    const videoSearch = _.debounce((term)=>{this.videoSearch(term)}, 300)
     
     return (
       <div>
@@ -42,6 +37,7 @@ class App extends Component {
                 onSearchTermChange={videoSearch}/>
             <VideoMain
                 video={this.state.displayVideo}/>
+                {this.videoSearch("dog yoga")}
             <VideoList
                 onVideoSelect= {displayVideo => this.setState({displayVideo})}
                 videos ={this.state.videos}/> 
