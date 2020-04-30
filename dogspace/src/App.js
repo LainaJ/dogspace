@@ -6,7 +6,6 @@ import SearchBar from './SearchBar';
 import VideoMain from './VideoMain';
 import VideoList from './VideoList';
 
-
 let API_KEY = process.env.REACT_APP_API_KEY_YT
 
 class App extends Component {
