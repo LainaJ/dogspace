@@ -10,7 +10,7 @@
     "react-dom": "^16.13.1",
     "react-scripts": "3.4.1",
     "youtube-api-search": "0.0.5",
-    "lodash": "^4.17.13" 
+    "lodash": "^4.17.13"
   },
   "scripts": {
     "start": "react-scripts start",
