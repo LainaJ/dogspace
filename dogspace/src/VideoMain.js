@@ -3,7 +3,6 @@ import React, { Component} from 'react';
 class VideoMain extends Component {
 
     render () {
-
         const video =  this.props.video
 
         if (!video) {
