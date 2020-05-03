@@ -5,7 +5,7 @@ class VideoMain extends Component {
     render () {
         const video =  this.props.video
 
-        //if no video returned
+        //if no video is returned
         if (!video) {
             return <div>Fetching videos...</div>
         }
