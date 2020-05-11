@@ -44,6 +44,9 @@
 }
 
 nav{
+  /* margin: 0px;
+  padding: 0px;
+  box-sizing: border-box; */
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -54,4 +57,19 @@ nav{
 .logo{
   color: white;
   text-transform: uppercase;
+  letter-spacing: 5px;
+  font-size: 18px;
+}
+
+.nav-links{
+  display: flex;
+  justify-content: space-around;
+  width: 40%;
+}
+
+.nav-links{
+  color: white;
+  text-decoration: none;
+  letter-spacing: 3px;
+
 }
