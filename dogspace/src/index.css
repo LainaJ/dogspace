@@ -85,6 +85,8 @@ nav{
 
 .burger div{
   width: 25px;
-  height: 5px;
-  color: rgb(226, 226, 226) 
+  height: 3px;
+  background-color: rgb(226, 226, 226);
+  margin: 5px;
 }
+
