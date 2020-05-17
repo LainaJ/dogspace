@@ -59,7 +59,7 @@ nav{
 
 
 .logo{
-  color: white;
+  color: rgb(226, 226, 226);
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 18px;
@@ -75,5 +75,16 @@ nav{
   color: white;
   text-decoration: none;
   letter-spacing: 3px;
-  font-weight: bold;
+  /* font-weight: bold; */
+  font-size: 14px;
+}
+
+.nav-links li{
+  list-style: none;
+} 
+
+.burger div{
+  width: 25px;
+  height: 5px;
+  color: rgb(226, 226, 226) 
 }
