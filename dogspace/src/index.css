@@ -1,3 +1,17 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+nav{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 8vh;
+  background-color: #5d4954;
+}
+
 .page-title{
   text-align: center;
   font-size: 141px;
@@ -43,23 +57,13 @@
   background-color: lightpink;
 }
 
-nav{
-  /* margin: 0px;
-  padding: 0px;
-  box-sizing: border-box; */
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  min-height: 8vh;
-  background-color: #5d4954;
-}
 
 .logo{
   color: white;
   text-transform: uppercase;
   letter-spacing: 5px;
   font-size: 18px;
-}
+} 
 
 .nav-links{
   display: flex;
@@ -67,9 +71,9 @@ nav{
   width: 40%;
 }
 
-.nav-links{
+.nav-links a{
   color: white;
   text-decoration: none;
   letter-spacing: 3px;
-
+  font-weight: bold;
 }
