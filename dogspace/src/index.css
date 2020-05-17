@@ -68,7 +68,7 @@ nav{
 .nav-links{
   display: flex;
   justify-content: space-around;
-  width: 40%;
+  width: 30%;
 }
 
 .nav-links a{
@@ -83,10 +83,27 @@ nav{
   list-style: none;
 } 
 
+.burger {
+
+}
+
 .burger div{
   width: 25px;
   height: 3px;
   background-color: rgb(226, 226, 226);
   margin: 5px;
 }
+
+@media screen and (max-width:768px){
+  body{
+    display: none
+  }
+}
+
+@media screen and (max-width:1024px){
+    .nav-links{
+      width: 60%;
+    }
+  }
+  
 
