@@ -9,20 +9,19 @@ import VideoList from './VideoList';
 let API_KEY = process.env.REACT_APP_API_KEY_YT
 
 class App extends Component {
-  
+
   state = {
     videos: [],
     displayVideo: null
   }
 
-  videoSearch(term){
+  videoSearch (term) {
     YTSearch({key: API_KEY, term: term}, (videos) => {
       this.setState({ 
           videos: videos,
           displayVideo: videos[0]
       })
   })
-
 }
 
   render() {
