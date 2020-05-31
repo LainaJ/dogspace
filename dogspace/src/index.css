@@ -57,7 +57,6 @@ nav{
   background-color: lightpink;
 }
 
-
 .logo{
   color: rgb(226, 226, 226);
   text-transform: uppercase;
@@ -81,10 +80,6 @@ nav{
 
 .nav-links li{
   list-style: none;
-} 
-
-.burger {
-
 }
 
 .burger div{
@@ -94,11 +89,14 @@ nav{
   margin: 5px;
 }
 
-@media screen and (max-width:768px){
+/* media queries and responsive design
+*/ 
+
+/* @media screen and (max-width:768px){
   body{
     display: none
   }
-}
+} */
 
 @media screen and (max-width:1024px){
     .nav-links{
@@ -106,4 +104,9 @@ nav{
     }
   }
   
+  @media screen and (max-width:845px){
+    .page-title{
+      font-size: 90px;
+    }
+  }
 
